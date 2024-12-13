@@ -8,10 +8,11 @@ import tasks from "@/features/tasks/server/route";
 
 const app = new Hono().basePath("/api");
 
-app
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const routes = app
   .route("/auth", auth)
   .route("/workspaces", workspaces)
-  .route("/members", members)
+  .route("members", members)
   .route("/projects", projects)
   .route("/tasks", tasks);
 
@@ -20,4 +21,4 @@ export const POST = handle(app);
 export const PATCH = handle(app);
 export const DELETE = handle(app);
 
-export type AppType = typeof app; // Use `app` instead of `routes`
+export type AppType = typeof routes;
