@@ -12,7 +12,7 @@ const app = new Hono().basePath("/api");
 const routes = app
   .route("/auth", auth)
   .route("/workspaces", workspaces)
-  .route("members", members)
+  .route("/members", members)
   .route("/projects", projects)
   .route("/tasks", tasks);
 
