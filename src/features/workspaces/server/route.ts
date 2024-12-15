@@ -42,7 +42,6 @@ const app = new Hono()
 
     return c.json({ data: workspaces });
   })
-
   .post(
     "/",
     zValidator("form", createWorkspaceSchema),

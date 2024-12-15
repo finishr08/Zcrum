@@ -85,10 +85,7 @@ const TaskViewSwitcher = ({ hideProjectFilter }: TaskViewSwitcherProps) => {
         ) : (
           <>
             <TabsContent value="table" className="mt-0">
-              <DataTable
-                columns={columns}
-                data={tasks?.documents ?? []}
-              />
+              <DataTable columns={columns} data={tasks?.documents ?? []} />
             </TabsContent>
 
             <TabsContent value="kanban" className="mt-0">
@@ -98,7 +95,7 @@ const TaskViewSwitcher = ({ hideProjectFilter }: TaskViewSwitcherProps) => {
               />
             </TabsContent>
 
-            <TabsContent value="calender" className="mt-0 h-full pb-4">
+            <TabsContent value="calender" className="mt-0 h-full pb-4 sm:block">
               <DataCalendar data={tasks?.documents ?? []} />
             </TabsContent>
           </>
