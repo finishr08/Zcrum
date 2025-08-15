@@ -1,21 +1,6 @@
 "use client";
 
 import { z } from "zod";
-import { useRef } from "react";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { Workspace } from "../types";
-import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { updateWorkspaceSchema } from "../schemas";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowBigLeftIcon, CopyIcon, ImageIcon } from "lucide-react";
-import DottedSeperator from "@/components/dotted-seperator";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { useUpateWorkspace } from "../api/use-update-workspace";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Form,
   FormControl,
@@ -24,10 +9,25 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { useConfirm } from "@/hooks/useConfirm";
-import { useDeleteWorkspace } from "../api/use-delete-workspace";
+import Image from "next/image";
+import { useRef } from "react";
 import { toast } from "sonner";
+import { cn } from "@/lib/utils";
+import { Workspace } from "../types";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useConfirm } from "@/hooks/useConfirm";
+import { updateWorkspaceSchema } from "../schemas";
+import { zodResolver } from "@hookform/resolvers/zod";
+import DottedSeperator from "@/components/dotted-seperator";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { useUpateWorkspace } from "../api/use-update-workspace";
+import { useDeleteWorkspace } from "../api/use-delete-workspace";
 import { useResetInviteCode } from "../api/use-reset-invite-code";
+import { ArrowBigLeftIcon, CopyIcon, ImageIcon } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface EditWorkspaceFormProps {
   onCancel?: () => void;

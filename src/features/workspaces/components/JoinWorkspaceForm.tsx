@@ -1,8 +1,5 @@
 "use client";
 
-import DottedSeperator from "@/components/dotted-seperator";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 import {
   Card,
   CardContent,
@@ -11,9 +8,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
-import { useJoinWorkspace } from "../api/use-join-workspace";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 import { useInviteCode } from "../hooks/useInviteCode";
 import { useWorkspaceId } from "../hooks/userWorkspaceId";
+import DottedSeperator from "@/components/dotted-seperator";
+import { useJoinWorkspace } from "../api/use-join-workspace";
 
 interface JoinWorkspaceFormProps {
   initialValues: {
