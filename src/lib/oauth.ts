@@ -1,9 +1,9 @@
 "use server";
 
-import { CreateAdminClient } from "@/lib/appwrite";
-import { redirect } from "next/navigation";
 import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 import { OAuthProvider } from "node-appwrite";
+import { CreateAdminClient } from "@/lib/appwrite";
 
 export async function signUpWithGithub() {
   const { account } = await CreateAdminClient();
