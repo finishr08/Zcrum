@@ -1,8 +1,8 @@
-import { client } from "@/lib/rpc";
 import { toast } from "sonner";
+import { client } from "@/lib/rpc";
 import { InferResponseType } from "hono";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type ResponseType = InferResponseType<(typeof client.api.auth.logout)["$post"]>;
 
