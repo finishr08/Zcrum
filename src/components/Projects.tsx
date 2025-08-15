@@ -1,14 +1,14 @@
 "use client";
 
-import { useGetProjects } from "@/features/projects/api/use-get-projects";
-import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
-import { useCreateProjectModal } from "@/features/projects/hooks/useCreateProjectModal";
-import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { RiAddCircleFill } from "react-icons/ri";
 import { Project } from "@/features/projects/types";
+import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
+import { useGetProjects } from "@/features/projects/api/use-get-projects";
+import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
+import { useCreateProjectModal } from "@/features/projects/hooks/useCreateProjectModal";
 
 const Projects = () => {
   const pathname = usePathname();
