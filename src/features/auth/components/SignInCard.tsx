@@ -1,12 +1,7 @@
 "use client";
 
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
-import DottedSeperator from "@/components/dotted-seperator";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { useForm } from "react-hook-form";
+import { z } from "zod";
+import Link from "next/link";
 import {
   Form,
   FormControl,
@@ -14,12 +9,17 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import Link from "next/link";
 import { loginSchema } from "../schemas";
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 import { useLogin } from "../api/use-login";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { zodResolver } from "@hookform/resolvers/zod";
+import DottedSeperator from "@/components/dotted-seperator";
 import { signUpWithGithub, signUpWithGoogle } from "@/lib/oauth";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const SignInCard = () => {
   const { mutate, isPending } = useLogin();
