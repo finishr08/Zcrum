@@ -1,7 +1,7 @@
 import React from "react";
 import { redirect } from "next/navigation";
-import { getCurrent } from "@/features/auth/queries";
 import WorkspacesIdSettingsClient from "./client";
+import { getCurrent } from "@/features/auth/queries";
 
 const WorkspaceIdSettingsPage = async () => {
   const user = await getCurrent();

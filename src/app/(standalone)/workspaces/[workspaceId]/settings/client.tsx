@@ -2,9 +2,9 @@
 
 import PageError from "@/components/PageError";
 import PageLoader from "@/components/PageLoader";
+import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
 import { useGetWorkspace } from "@/features/workspaces/api/use-get-workspace";
 import EditWorkspaceForm from "@/features/workspaces/components/EditWorkspaceForm";
-import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
 
 const WorkspacesIdSettingsClient = () => {
   const workspaceId = useWorkspaceId();
