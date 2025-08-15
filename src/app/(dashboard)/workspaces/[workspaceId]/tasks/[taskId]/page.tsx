@@ -1,7 +1,7 @@
-import { getCurrent } from "@/features/auth/queries";
-import { redirect } from "next/navigation";
 import React from "react";
 import TaskIdClient from "./client";
+import { redirect } from "next/navigation";
+import { getCurrent } from "@/features/auth/queries";
 
 const TaskIdPage = async () => {
   const user = await getCurrent();
