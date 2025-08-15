@@ -1,7 +1,5 @@
 "use client";
-import { RiAddCircleFill } from "react-icons/ri";
-import { useGetWorkspaces } from "@/features/workspaces/api/use-get-workspaces";
-import WorkspaceAvatar from "@/features/workspaces/components/WorkspaceAvatar";
+
 import {
   Select,
   SelectContent,
@@ -10,9 +8,12 @@ import {
   SelectValue,
 } from "./ui/select";
 import { useRouter } from "next/navigation";
-import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
-import { useCreateWorkspaceModal } from "@/features/workspaces/hooks/useCreateWorkspaceModal";
+import { RiAddCircleFill } from "react-icons/ri";
 import { Workspace } from "@/features/workspaces/types";
+import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
+import WorkspaceAvatar from "@/features/workspaces/components/WorkspaceAvatar";
+import { useGetWorkspaces } from "@/features/workspaces/api/use-get-workspaces";
+import { useCreateWorkspaceModal } from "@/features/workspaces/hooks/useCreateWorkspaceModal";
 
 const WorkspacesSwitcher = () => {
   const workspaceId = useWorkspaceId();
