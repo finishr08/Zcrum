@@ -1,9 +1,7 @@
 "use client";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 
-import DottedSeperator from "@/components/dotted-seperator";
-import { Button } from "@/components/ui/button";
+import { z } from "zod";
+import Link from "next/link";
 import {
   Card,
   CardHeader,
@@ -11,9 +9,6 @@ import {
   CardContent,
   CardDescription,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import Link from "next/link";
-import { useForm } from "react-hook-form";
 import {
   Form,
   FormControl,
@@ -21,10 +16,15 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { FcGoogle } from "react-icons/fc";
+import { useForm } from "react-hook-form";
+import { FaGithub } from "react-icons/fa";
 import { registerSchema } from "../schemas";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { useRegister } from "../api/use-register";
+import { zodResolver } from "@hookform/resolvers/zod";
+import DottedSeperator from "@/components/dotted-seperator";
 import { signUpWithGithub, signUpWithGoogle } from "@/lib/oauth";
 
 const SignUpCard = () => {
