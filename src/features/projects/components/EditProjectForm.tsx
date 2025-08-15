@@ -1,17 +1,6 @@
 "use client";
 
 import { z } from "zod";
-import { cn } from "@/lib/utils";
-import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { updateProjectSchema } from "../schemas";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowBigLeftIcon } from "lucide-react";
-import DottedSeperator from "@/components/dotted-seperator";
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Form,
   FormControl,
@@ -20,10 +9,20 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { useConfirm } from "@/hooks/useConfirm";
-import { useUpdateProject } from "../api/use-update-project";
+import { cn } from "@/lib/utils";
 import { Project } from "../types";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
+import { ArrowBigLeftIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useConfirm } from "@/hooks/useConfirm";
+import { updateProjectSchema } from "../schemas";
+import { zodResolver } from "@hookform/resolvers/zod";
+import DottedSeperator from "@/components/dotted-seperator";
+import { useUpdateProject } from "../api/use-update-project";
 import { useDeleteProject } from "../api/use-delete-project";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface EditProjectFormProps {
   onCancel?: () => void;
