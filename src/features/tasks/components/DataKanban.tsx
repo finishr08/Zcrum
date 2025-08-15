@@ -1,13 +1,13 @@
-import { Task, TaskStatus } from "../types";
-import React, { useState, useCallback, useEffect } from "react";
 import {
   DragDropContext,
   Droppable,
   Draggable,
   DropResult,
 } from "@hello-pangea/dnd";
-import KanbanColumnHeader from "./KanbanColumnHeader";
 import KanbanCard from "./KanbanCard";
+import { Task, TaskStatus } from "../types";
+import KanbanColumnHeader from "./KanbanColumnHeader";
+import React, { useState, useCallback, useEffect } from "react";
 
 const boards: TaskStatus[] = [
   TaskStatus.BACKLOG,

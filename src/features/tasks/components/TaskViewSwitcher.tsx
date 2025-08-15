@@ -1,23 +1,23 @@
 "use client";
 
-import DottedSeperator from "@/components/dotted-seperator";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Loader, PlusIcon } from "lucide-react";
-import React, { useCallback } from "react";
-import { useCreateTaskModal } from "../hooks/useCreateTaskModal";
-import { useGetTasks } from "../api/use-get-tasks";
-import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
-import { useQueryState } from "nuqs";
-import Datafilters from "./Datafilters";
-import { useTaskFilter } from "../hooks/useTaskFilter";
-import { DataTable } from "./DataTable";
 import { columns } from "./Columns";
+import { useQueryState } from "nuqs";
 import DataKanban from "./DataKanban";
 import { TaskStatus } from "../types";
-import { useBulkUpdateTask } from "../api/use-bulk-update-task";
+import { DataTable } from "./DataTable";
+import Datafilters from "./Datafilters";
 import DataCalendar from "./DataCalendar";
+import React, { useCallback } from "react";
+import { Button } from "@/components/ui/button";
+import { Loader, PlusIcon } from "lucide-react";
+import { useGetTasks } from "../api/use-get-tasks";
+import { useTaskFilter } from "../hooks/useTaskFilter";
+import DottedSeperator from "@/components/dotted-seperator";
+import { useBulkUpdateTask } from "../api/use-bulk-update-task";
+import { useCreateTaskModal } from "../hooks/useCreateTaskModal";
 import { UseProjectId } from "@/features/projects/hooks/useProjectId";
+import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface TaskViewSwitcherProps {
   hideProjectFilter?: boolean;

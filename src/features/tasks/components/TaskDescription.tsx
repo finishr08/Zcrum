@@ -1,10 +1,10 @@
-import React, { useState } from "react";
 import { Task } from "../types";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PencilIcon, XIcon } from "lucide-react";
-import DottedSeperator from "@/components/dotted-seperator";
-import { useUpdateTask } from "../api/use-update-task";
 import { Textarea } from "@/components/ui/textarea";
+import { useUpdateTask } from "../api/use-update-task";
+import DottedSeperator from "@/components/dotted-seperator";
 
 interface TaskDescriptionProps {
   task: Task;

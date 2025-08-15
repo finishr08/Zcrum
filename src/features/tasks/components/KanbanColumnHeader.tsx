@@ -1,5 +1,4 @@
 import React from "react";
-import { TaskStatus } from "../types";
 import {
   CircleCheckIcon,
   CircleDashedIcon,
@@ -8,6 +7,7 @@ import {
   CircleIcon,
   PlusIcon,
 } from "lucide-react";
+import { TaskStatus } from "../types";
 import { Button } from "@/components/ui/button";
 import { useCreateTaskModal } from "../hooks/useCreateTaskModal";
 

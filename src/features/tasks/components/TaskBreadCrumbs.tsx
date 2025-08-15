@@ -1,14 +1,14 @@
-import { Project } from "@/features/projects/types";
 import React from "react";
-import { Task } from "../types";
-import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
 import Link from "next/link";
-import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
-import { ChevronRightIcon, TrashIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useDeleteTask } from "../api/use-delete-task";
-import { useConfirm } from "@/hooks/useConfirm";
+import { Task } from "../types";
 import { useRouter } from "next/navigation";
+import { useConfirm } from "@/hooks/useConfirm";
+import { Button } from "@/components/ui/button";
+import { Project } from "@/features/projects/types";
+import { useDeleteTask } from "../api/use-delete-task";
+import { ChevronRightIcon, TrashIcon } from "lucide-react";
+import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
+import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
 
 interface TaskBreadCrumbsProps {
   project: Project;

@@ -1,10 +1,6 @@
 "use client";
 
 import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import DottedSeperator from "@/components/dotted-seperator";
 import {
   Form,
   FormControl,
@@ -13,11 +9,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { createTasksSchema } from "../schema";
-import DatePicker from "@/components/ui/date-picker";
 import {
   Select,
   SelectContent,
@@ -25,10 +16,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import MemberAvatar from "@/features/members/components/MemberAvatar";
+import { cn } from "@/lib/utils";
+import { useForm } from "react-hook-form";
 import { Task, TaskStatus } from "../types";
-import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
+import { Input } from "@/components/ui/input";
+import { createTasksSchema } from "../schema";
+import { Button } from "@/components/ui/button";
+import DatePicker from "@/components/ui/date-picker";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useUpdateTask } from "../api/use-update-task";
+import DottedSeperator from "@/components/dotted-seperator";
+import MemberAvatar from "@/features/members/components/MemberAvatar";
+import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface EditTaskFormProps {
   onCancel?: () => void;

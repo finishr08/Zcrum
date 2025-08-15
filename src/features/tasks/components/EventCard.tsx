@@ -1,12 +1,12 @@
-import { Project } from "@/features/projects/types";
 import React from "react";
-import { TaskStatus } from "../types";
 import { cn } from "@/lib/utils";
+import { TaskStatus } from "../types";
+import { useRouter } from "next/navigation";
+import { Member } from "@/features/members/types";
+import { Project } from "@/features/projects/types";
 import MemberAvatar from "@/features/members/components/MemberAvatar";
 import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
 import { useWorkspaceId } from "@/features/workspaces/hooks/userWorkspaceId";
-import { useRouter } from "next/navigation";
-import { Member } from "@/features/members/types";
 
 interface EventCardProps {
   title: string;
