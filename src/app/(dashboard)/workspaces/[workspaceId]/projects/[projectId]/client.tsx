@@ -1,16 +1,16 @@
 "use client";
 
+import Link from "next/link";
+import { PencilIcon } from "lucide-react";
 import Analytics from "@/components/Analytics";
 import PageError from "@/components/PageError";
-import PageLoader from "@/components/PageLoader";
 import { Button } from "@/components/ui/button";
-import { useGetProject } from "@/features/projects/api/use-get-project";
-import { useGetProjectAnalytics } from "@/features/projects/api/use-get-project-analytics";
-import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
+import PageLoader from "@/components/PageLoader";
 import { UseProjectId } from "@/features/projects/hooks/useProjectId";
+import { useGetProject } from "@/features/projects/api/use-get-project";
+import ProjectAvatar from "@/features/projects/components/ProjectAvatar";
 import TaskViewSwitcher from "@/features/tasks/components/TaskViewSwitcher";
-import { PencilIcon } from "lucide-react";
-import Link from "next/link";
+import { useGetProjectAnalytics } from "@/features/projects/api/use-get-project-analytics";
 
 const ProjectIdClient = () => {
   const projectId = UseProjectId();
