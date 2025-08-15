@@ -2,9 +2,9 @@
 
 import PageError from "@/components/PageError";
 import PageLoader from "@/components/PageLoader";
+import { UseProjectId } from "@/features/projects/hooks/useProjectId";
 import { useGetProject } from "@/features/projects/api/use-get-project";
 import EditProjectForm from "@/features/projects/components/EditProjectForm";
-import { UseProjectId } from "@/features/projects/hooks/useProjectId";
 
 const ProjectIdSettingsClient = () => {
   const projectId = UseProjectId();
