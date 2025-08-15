@@ -1,8 +1,8 @@
 "use client";
 
-import { UserButton } from "@/features/auth/components/UserButton";
 import MobileSidebar from "./mobile-sidebar";
 import { usePathname } from "next/navigation";
+import { UserButton } from "@/features/auth/components/UserButton";
 
 const pathnameMap = {
   tasks: {
