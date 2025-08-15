@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
-import DottedSeperator from "./dotted-seperator";
-import Navigation from "./Navigation";
-import WorkspacesSwitcher from "./WorkspacesSwitcher";
+import Image from "next/image";
 import Projects from "./Projects";
+import Navigation from "./Navigation";
+import DottedSeperator from "./dotted-seperator";
+import WorkspacesSwitcher from "./WorkspacesSwitcher";
 
 const Sidebar = () => {
   return (
