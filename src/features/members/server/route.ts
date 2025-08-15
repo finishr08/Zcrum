@@ -1,12 +1,12 @@
+import { z } from "zod";
+import { Hono } from "hono";
+import { Query } from "node-appwrite";
+import { getMembers } from "../utils";
+import { Member, MemberRole } from "../types";
+import { zValidator } from "@hono/zod-validator";
+import { DATABASE_ID, MEMBERS_ID } from "@/config";
 import { CreateAdminClient } from "@/lib/appwrite";
 import { sessionMiddleware } from "@/lib/sessionMiddleware";
-import { zValidator } from "@hono/zod-validator";
-import { Hono } from "hono";
-import { z } from "zod";
-import { getMembers } from "../utils";
-import { DATABASE_ID, MEMBERS_ID } from "@/config";
-import { Query } from "node-appwrite";
-import { Member, MemberRole } from "../types";
 
 const app = new Hono()
   .get(
